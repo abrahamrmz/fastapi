@@ -59,7 +59,7 @@ html = """
                 var client_id = Date.now();
                 
                 document.querySelector("#ws-id").textContent = client_id;
-                ws = new WebSocket(`wss://chat-il81.onrender.com/ws/${client_id}`);
+                ws = new WebSocket(`wss://chat-il81.onrender.com/ws/${client_id}?nickname=${nickname}`);
                 document.getElementById("message-container").style.display = "block";
                 document.getElementById("connectButton").disabled = true;
                 document.getElementById("nickname").readOnly = true;
